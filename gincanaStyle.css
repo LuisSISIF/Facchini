@@ -1,0 +1,434 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+  html body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Cabeçalho, Conteúdo, Rodapé */
+    height: 100vh; /* Define a altura da página para ocupar a altura da tela */
+  }
+  .icone{
+    max-width: 32px;
+    max-height: 32px;
+    width: 100%;
+    height: 100%;
+  }
+  header{
+    width: 100%;
+  }
+  .SloganHeader{
+    width: 100%;
+  }
+  .SloganHeader img{
+    width: 100%;
+    height: 100%;
+    max-height: 250px;
+  }
+  .menu-header{
+    margin-top: -4px;
+    display: flex;
+    background-color: #f7bf37;
+    width: 100%;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+
+  }
+  .menu-header ul{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px 0 10px;
+  }
+  .menu-header ul li{
+    text-align: center;
+    list-style: none;
+  }
+  .menu-header ul li a{
+    font-family: 'Bangers', cursive;
+    font-size: 25px;
+    font-weight: 700;
+    text-decoration: none;
+    color: rgba(209, 0, 0, 0.808);
+    padding: 0 15px 0 15px;
+  }
+  .menu-header ul li a:hover{
+    border-radius: 18px;
+    background-color: rgba(209, 0, 0, 0.808);
+    color: white;
+  }
+
+  main{
+    background-image: url('img/Fundos-Texturas/texturaGincana.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  .container{
+    padding: 30px 50px 10px 50px;
+    background-color: rgba(255, 255, 255, 0.87);
+
+  }
+  .fundocor{
+    background-color: rgba(255, 115, 0, 0.822);
+    padding: 10px 50px 10px 50px;
+  }
+  .row{
+    opacity: 0;
+    transition: opacity 0.5s;
+    margin: 20px 0 20px 0;
+    display: flex;
+    gap: 100px;
+  }
+  .fade-in {
+    opacity: 1;
+}
+  .centralizado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 35px;
+  }
+  
+  #aviso{
+    background-color: #02baf4;
+    border-radius: 18px;
+    width: 100%;
+    max-width: 450px;
+    height: 120px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+  .texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px 20px 5px 20px;
+  }
+  .texto h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+  }
+  #titPage h1{
+    Color:#a57402;
+  }
+  .subcontainer{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 50px;
+    grid-row-gap: 30px;
+    justify-items: center;
+    padding: 3px;
+  }
+  #eq1 {
+    animation: fadeIn 3s ease-in-out;
+}
+
+#eq2 {
+    animation: slideIn 4s ease-in-out;
+}
+
+#eq3 {
+    animation: rotateIn 5s ease-in-out;
+}
+
+#eq4 {
+    animation: dropIn 6s ease-in-out;
+}
+ .cartao{
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+  }
+  .cartao a{
+    text-decoration: none;
+  }
+
+  .fundo-card{
+    border-radius: 50%;
+  }
+  #azul{
+    background-color: #1201ac;
+  }
+  #verde{
+    background-color: #02c422;
+  }
+  .cartao .imgRedonda{
+    max-width: 300px;
+    min-height: 260px;
+    border-radius: 50%;
+  }
+  .cartao h3{
+    margin-top: 20px;
+    color: #800080;
+  }
+  #eq1:hover h3{
+    text-decoration: underline;
+    text-decoration-color: rgba(251, 255, 7, 0.644);
+    color: rgba(251, 255, 7, 0.644);
+  }
+  #eq1:hover {
+    transform: scale(1.2);
+}
+  #eq1:hover img{
+    box-shadow: 5px 18px 18px rgba(251, 255, 7, 0.644);
+  }
+
+  #eq2:hover h3{
+    text-decoration: underline;
+    text-decoration-color: rgba(1, 79, 247, 0.705);
+    color: rgba(1, 79, 247, 0.705);
+  }
+  #eq2:hover {
+    transform: scale(1.2);
+}
+  #eq2:hover img{
+    box-shadow: 5px 18px 18px rgba(3, 74, 228, 0.774);
+  }
+
+  #eq3:hover h3 {
+    text-decoration: underline;
+    text-decoration-color: rgba(1, 100, 1, 0.705);
+    color: rgba(1, 100, 1, 0.705);
+}
+
+#eq3:hover {
+    transform: scale(1.2);
+}
+  #eq3:hover img{
+    box-shadow: 5px 18px 18px rgba(1, 100, 1, 0.705);
+  }
+
+  #eq4:hover h3 {
+    text-decoration: underline;
+    text-decoration-color: rgba(212, 2, 2, 0.705);
+    color: rgba(212, 2, 2, 0.705);
+}
+
+#eq4:hover {
+  transform: scale(1.2);
+}
+  #eq4:hover img{
+    box-shadow: 5px 18px 18px rgba(212, 2, 2, 0.705);
+  }
+  
+
+/*Footer*/
+footer{
+  background-image: url('./img/Fundos-Texturas/quadronegro.jpg');
+  background-size: 100% 100%;
+  color: #fff;
+  width: 100%;
+  padding: 0 10px 0 10px;
+  margin-bottom: 0;
+}
+footer hr{
+  height: 2px;
+  background-color: #87CEFA;
+  border: 2px;
+}
+ footer h3{
+  font-weight: 700;
+  font-family: "Chalkboard", sans-serif;
+  color: #87CEFA;
+  letter-spacing: 0.3rem;
+}
+footer .linha h4{
+  width: max-content;
+  font-size: 18px;
+}
+footer p{
+  margin-top: 0;
+  font-size: 17px;
+  font-weight: 500;
+  display: contents;
+  color: aliceblue;
+}
+footer .cont{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-column-gap: 190px;
+  grid-row-gap: 50px;
+  align-items: center;
+  justify-items: center;
+}
+#siga-nos{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 30px;
+  
+}
+footer a img{
+  margin-top: 5px;
+  width: 60px;
+  height: 60px;
+} 
+footer #facebook:hover img{
+  margin-top: 5px;
+  width: 70px;
+  height: 70px;
+  box-shadow: 0 0 15px rgba(24, 119, 242, 0.7); /* Sombra 3D azul com opacidade de 0.7 */
+  border-radius: 50%;
+  transition: all .5s;
+  border: 1px solid transparent;
+  animation: pulse 0.7s infinite;
+  margin: 0 auto;
+  display: table;
+  animation-direction: alternate;
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+footer #insta:hover img{
+  margin-top: 5px;
+  width: 70px;
+  height: 70px;
+  box-shadow: 0 0 10px rgba(228, 64, 95, 0.7); /* Sombra 3D com a cor do Instagram e opacidade de 0.7 */
+  border-radius: 50%;
+  transition: all .5s;
+  border: 1px solid transparent;
+  animation: pulse 0.7s infinite;
+  margin: 0 auto;
+  display: table;
+  animation-direction: alternate;
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+footer div{
+  display: flex;
+  flex-direction: column;
+  line-height: 20px;
+  font-size: 15px;
+  font-weight: normal;
+  align-items: center;
+  justify-content: center;
+  padding:5px;
+}
+
+#andromeda{
+  flex-direction: row;
+  gap: 20px;
+}
+#andromeda-logo{
+  width: 120px;
+  height: auto;
+  transition: all .5s;
+  border: 1px solid transparent;
+  animation: pulse 0.7s infinite;
+  margin: 0 auto;
+  display: table;
+  animation-direction: alternate;
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+
+
+/*Key Frames*/
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    filter: brightness(100%);
+  }
+  100% {
+    transform: scale(1.1);
+    filter: brightness(200%);
+  }
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+    -webkit-filter: brightness(100%);
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+    -webkit-filter: brightness(200%);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+      transform: translateX(100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+@keyframes rotateIn {
+  from {
+      transform: rotate(45deg);
+      opacity: 0;
+  }
+  to {
+      transform: rotate(0deg);
+      opacity: 1;
+  }
+}
+
+@keyframes dropIn {
+  from {
+      transform: translateY(-100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+  
+    /* medias query*/
+    @media (max-width: 800px) {
+      footer .cont{
+        width: 100%;
+        align-items: flex-start;
+        justify-items: flex-start;
+        padding-left: 50px;
+        grid-template-columns: 1fr;
+      }
+    }
+
+
+    @media (min-width: 801px) and (max-width: 980px) {
+
+    }
+    @media (min-width: 802px) and (max-width: 999px){
+
+    }
+    @media (min-width: 1200px){
+      footer .cont{
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+    @media (max-width: 1350px) {
+      .subcontainer{
+        grid-template-columns: 1fr 1fr;
+      }
+    }

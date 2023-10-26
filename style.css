@@ -1,0 +1,521 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Cabeçalho, Conteúdo, Rodapé */
+    height: 100vh; /* Define a altura da página para ocupar a altura da tela */
+    background-image: url('img/Fundos-Texturas/textura\ papel.jpg');
+  }
+  @font-face {
+    font-family: "Chalkboard"; /* Substitua pelo nome exato da fonte */
+    src: url('./fonts/Chalkboard.ttf') format('truetype');
+  }
+
+  #clicado{
+    color: #87CEFA;
+    text-decoration: underline;
+    font-weight: 700px;
+    font-size: 25px;
+  }
+  .linha{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+ /* Cabeçalho*/
+ header{
+    display: flex;
+    justify-content: center;
+    background-image: url('./img/Fundos-Texturas/blue\ chalkboard.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+     box-shadow: 0 0 20px rgba(1, 46, 172, 0.664); /* Sombra 3D */
+    color: #ffffff;
+    height: max-content;
+    width: 100%;
+    padding: 5px 5px 5px 5px;
+ }
+
+ #titulo-escola {
+    display: flex;
+    align-items: center;
+ }
+
+ #titulo-escola h1{
+    margin-top: 10px;
+    padding: 0 0 0 50px;
+    font-family: "Chalkboard", sans-serif;
+    color: aliceblue;
+    letter-spacing: 0.3rem;  
+    font-weight: 700;  
+  }
+  #menu-header{
+    display: flex;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: Chalkboard;
+    color: aliceblue;
+    padding: 0 30px 0 0;
+  }
+  #menu-header ul {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+  }
+   #flor{
+    width: 32px;
+    height: auto;
+   }
+  #menu-header ul li {
+    list-style: none;
+  }
+  #menu-header ul li #LU{
+      color: rgb(255, 192, 203);
+  }
+  #menu-header ul li #LU img{
+    padding-right: 10px;
+  }
+  #menu-header ul li a {
+    position: relative;
+    display: flex;
+    text-transform: uppercase;
+    margin: 20px 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: aliceblue;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.5s;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #menu-header ul li a:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid rgb(18, 1, 59);
+    border-bottom: 2px solid rgb(18, 1, 59);
+    transform: scaleY(2);
+    opacity: 0;
+    transition: 0.3s;
+  }
+  
+  #menu-header ul li a:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #87CEFA;
+    transform: scale(0);
+    opacity: 0;
+    transition: 0.3s;
+    z-index: -1;
+  }
+  
+  #menu-header ul li #LU:after{
+    background-color: rgb(255, 192, 203);
+  }
+  #menu-header ul li a:hover {
+    color: rgb(64, 95, 138);
+  }
+  #menu-header ul li #LU:hover {
+    color: rgb(255, 192, 203);
+  }
+  
+  #menu-header ul li a:hover:before {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  
+  #menu-header ul li a:hover:after {
+    transform: scale(1);
+    opacity: 1;
+  }
+  .dropdown{
+    display: none;
+    width: max-content;
+    margin: 0 20px 0 10px;
+    align-items: center;
+    justify-content: center;
+  }
+  .dropdown .dropdown-toggle{
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .dropdown .btn:hover{
+    background-color: #87CEFA;
+  }
+  .dropdown .dropdown-toggle img{
+    width: 40px;
+    height: auto;
+  }
+  .dropdown .dropdown-menu{
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-image: url(img/Fundos-Texturas/blue\ chalkboard.jpg);
+    color: aliceblue;
+  }
+  .dropdown .dropdown-menu a{
+    color: aliceblue;
+    font-size: 20px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    margin: 5px 0 5px 0;
+  }
+
+  .dropdown .dropdown-menu a:hover{
+    background-color: #87CEFA;
+  }
+ 
+  #divCarousel{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  /*Carousel*/
+  #carouselExampleFade{
+    width: 100%;
+    
+    height: max-content;
+  }
+  #carouselExampleFade img{
+    height: auto;
+    max-height: 400px;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+  }
+
+  /*Main*/
+main{
+  padding: 0 20px 0 20px;
+}
+  main .container {
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgb(255, 255, 255, 0.8);
+    box-shadow: 0px 5px 20px -5px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  main .conteudo{
+    width: 100%;
+    padding: 5px;
+  }
+  /* Estilo para animação de rolagem */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+  }
+
+  main h2 {
+    font-size: 28px;
+    color: #003f81;
+  }
+
+  main h3{
+    color: #003f81;
+  }
+  main p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  .subcontainer{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-column-gap: 50px;
+    grid-row-gap: 30px;
+    justify-items: center;
+    padding: 3px;
+  }
+ .cartao{
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+  }
+  .cartao a{
+    text-decoration: none;
+  }
+  .cartao img{
+    max-width: 300px;
+    min-height: 260px;
+    border-radius: 18px;
+  }
+
+  .cartao .imgRedonda{
+    max-width: 300px;
+    min-height: 260px;
+    border-radius: 50%;
+  }
+  .cartao:hover{
+    text-decoration: underline;
+    text-decoration-color: rgba(3, 74, 228, 0.5);
+    transform: scale(1.2);
+  }
+  .cartao:hover img{
+    box-shadow: 5px 18px 18px rgba(3, 74, 228, 0.5);
+  }
+  
+  .cartao h3{
+    margin-top: 20px;
+  }
+  /*Footer*/
+  footer{
+    background-image: url('./img/Fundos-Texturas/quadronegro.jpg');
+    background-size: 100% 100%;
+    color: #fff;
+    width: 100%;
+    padding: 0 10px 0 10px;
+    margin-bottom: 0;
+  }
+  footer hr{
+    height: 2px;
+    background-color: #87CEFA;
+    border: 2px;
+  }
+   footer h3{
+    font-weight: 700;
+    font-family: "Chalkboard", sans-serif;
+    color: #87CEFA;
+    letter-spacing: 0.3rem;
+  }
+  footer .linha h4{
+    width: max-content;
+    font-size: 18px;
+  }
+  footer p{
+    margin-top: 0;
+    font-size: 17px;
+    font-weight: 500;
+    display: contents;
+    color: aliceblue;
+  }
+  footer .cont{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-column-gap: 190px;
+    grid-row-gap: 50px;
+    align-items: center;
+    justify-items: center;
+  }
+  #siga-nos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 30px;
+    
+  }
+  footer a img{
+    margin-top: 5px;
+    width: 60px;
+    height: 60px;
+  } 
+  footer #facebook:hover img{
+    margin-top: 5px;
+    width: 70px;
+    height: 70px;
+    box-shadow: 0 0 15px rgba(24, 119, 242, 0.7); /* Sombra 3D azul com opacidade de 0.7 */
+    border-radius: 50%;
+    transition: all .5s;
+    border: 1px solid transparent;
+    animation: pulse 0.7s infinite;
+    margin: 0 auto;
+    display: table;
+    animation-direction: alternate;
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+  }
+  footer #insta:hover img{
+    margin-top: 5px;
+    width: 70px;
+    height: 70px;
+    box-shadow: 0 0 10px rgba(228, 64, 95, 0.7); /* Sombra 3D com a cor do Instagram e opacidade de 0.7 */
+    border-radius: 50%;
+    transition: all .5s;
+    border: 1px solid transparent;
+    animation: pulse 0.7s infinite;
+    margin: 0 auto;
+    display: table;
+    animation-direction: alternate;
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+  }
+  footer div{
+    display: flex;
+    flex-direction: column;
+    line-height: 20px;
+    font-size: 15px;
+    font-weight: normal;
+    align-items: center;
+    justify-content: center;
+    padding:5px;
+  }
+
+  #andromeda{
+    flex-direction: row;
+    gap: 20px;
+  }
+  #andromeda-logo{
+    width: 120px;
+    height: auto;
+    transition: all .5s;
+    border: 1px solid transparent;
+    animation: pulse 0.7s infinite;
+    margin: 0 auto;
+    display: table;
+    animation-direction: alternate;
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+  }
+
+
+  /*Key Frames*/
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      filter: brightness(100%);
+    }
+    100% {
+      transform: scale(1.1);
+      filter: brightness(200%);
+    }
+  }
+  
+  @-webkit-keyframes pulse {
+    0% {
+      -webkit-transform: scale(1);
+      -webkit-filter: brightness(100%);
+    }
+    100% {
+      -webkit-transform: scale(1.1);
+      -webkit-filter: brightness(200%);
+    }
+  }
+
+  /*Fim KeyFrames*/
+    /* medias query*/
+    @media (max-width: 800px) {
+      header #menu-header{
+        display: none;
+      }
+      #titulo-escola{
+        width: 100%;
+      }
+      .dropdown{
+        display:flex;
+      }
+      
+      footer .cont{
+        width: 100%;
+        align-items: flex-start;
+        justify-items: flex-start;
+        padding-left: 50px;
+        grid-template-columns: 1fr;
+      }
+    }
+
+
+    @media (min-width: 801px) and (max-width: 980px) {
+      header{
+        min-height: 200px;
+      }
+      #menu-header{
+        padding-left: 50px;
+      }
+      #menu-header ul{
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      #carouselExampleFade{
+        max-width: 80%;
+      }
+      main .conteudo{
+        max-width: 80%;
+      }
+    }
+    @media (min-width: 802px) and (max-width: 999px){
+      #carouselExampleFade{
+        max-width: 80%;
+      }
+      main .conteudo{
+        max-width: 80%;
+      }
+    }
+    @media (min-width: 1200px) and (max-width: 1819px){
+
+      #menu-header ul{
+        grid-column-gap: 50px;
+        padding-left: 0;
+      }
+
+      #carouselExampleFade{
+        max-width: 80%;
+      }
+      main .conteudo{
+        max-width: 80%;
+      }
+      
+      footer .cont{
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+    @media (min-width: 1820px) {
+      #titulo-escola{
+        min-width: 500px;
+      }
+      #menu-header{
+        margin-left: 150px;
+      }
+      #menu-header ul{
+        gap:100px;
+      }
+
+      #carouselExampleFade{
+        max-width: 1200px;
+      }
+      main .conteudo{
+       max-width: 1400px;
+      }
+
+      footer .cont{
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }

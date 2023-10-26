@@ -1,0 +1,170 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html body {
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-rows: auto 1fr auto; /* Cabeçalho, Conteúdo, Rodapé */
+      height: 100vh; /* Define a altura da página para ocupar a altura da tela */
+      background-image: url('img/Fundos-Texturas/texturaRanking.jpg');
+      background-size: cover;
+    }
+.row{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+}
+    header{
+      padding: 0 30px 0 30px;
+      width: 100%;
+      height: 100vh;
+      background-image: url('img/Fundos-Texturas/fundoRanking.jpg');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      display: flex;
+      gap: 50px;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0px 9px 15px rgba(0, 0, 0, 0.5); /* Sombra 3D preta na borda inferior */
+    }
+    #div1 {
+      animation: explode 2s ease-in forwards;
+  }
+
+  #div2 {
+      animation: slide 4s ease-in-out forwards;
+  }
+
+    header div{
+      width: max-content;
+    }
+    .podium{
+      opacity: 0.8;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+    }
+    .podium img{
+      width: 300px;
+      height: 300px;
+    }
+    .classificao{
+      border-radius: 18px;
+      background-color: rgba(0, 0, 0, 0.685);
+      min-width: 500px;
+
+    }
+    .classificao table{
+      width: 100%;
+      color: goldenrod;
+      border-radius: 18px;
+      box-shadow: 0px 0px 10px rgba(218, 165, 32, 0.76);
+    }
+    th, td {
+      text-align: center;
+    }
+    .posit{
+      width: 15%;
+
+    }
+    .equip{
+      width: 60%;
+    }
+    .point{
+      width: 25%;
+    }
+    #cabecalho th{
+      height: 60px;
+      background-color: rgba(0, 0, 0, 0.76);
+      font-size: 20px;
+    }
+    #cabecalho .posit{
+      border-top-left-radius: 18px;
+    }
+    #cabecalho .point{
+      border-top-right-radius: 18px;
+    }
+    .teams{
+      background-color: rgba(240, 248, 255, 0.445);
+      color: black;
+      font-size: 17px;
+    }
+    .teams td{
+      height: 60px;
+    }
+    #first{
+      background-color: rgba(233, 218, 10, 0.726);
+      color: black;
+      height: 90px;
+      font-size: 25px;
+      font-family: 'Times New Roman', Times, serif;
+    }
+    #first .posit{
+      border-radius: 50%;
+    }
+    #rodape td{
+      background-color: rgba(0, 0, 0, 0.918);
+      height: 20px;
+    }
+    #rodape .posit{
+      border-bottom-left-radius: 18px;
+    }
+    #rodape .point{
+      border-bottom-right-radius: 18px;
+    }
+
+   /* main{
+      padding: 50px 80px 20px 80px;
+      width: 100%;
+    }
+   */
+
+
+   @keyframes explode {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+   @media (min-width: 801px) and (max-width: 1240px) {
+      header{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        padding-bottom: 50px;
+        justify-content: center;
+        gap: 100px;
+      }
+      header div{
+        width: 100%;
+      }
+      .row{
+        justify-content: space-between;
+      }
+   }

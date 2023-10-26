@@ -1,0 +1,503 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+body {
+    padding: 0;
+    margin: 0;
+    background-image: url('Surprise/fundoBody.gif');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100vh; /* Define a altura da página para ocupar a altura da tela */
+}
+#flor{
+    transition: all .5s;
+    border: 1px solid transparent;
+    animation: pulse 0.7s infinite;
+    margin: 0 auto;
+    display: table;
+    animation-direction: alternate;
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+}
+.balao-de-dialogo {
+  position: absolute;
+  background-color: #f1f1f1d7;
+  color: #bb0038;
+  border-radius: 10px;
+  padding: 10px;
+  max-width: 300px;
+  text-align: center;
+  font-weight: 700;
+}
+#per1{
+  display: none;
+}
+#per2{
+  display: none;
+}
+#per3{
+  display: none;
+}
+#per4{
+  display: none;
+}
+#per5{
+  display: none;
+}
+#per6{
+  display: none;
+}
+#per7{
+  display: none;
+}
+#per8{
+  display:none;
+}
+#per9{
+  display:none;
+}
+#per10{
+  display:none;
+}
+#per11{
+  display:none;
+}
+#per12{
+  display:none;
+}
+#per13{
+  display:none;
+}
+
+.ponta {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #f1f1f1d7;
+  position: absolute;
+  transform: translateX(-50%);
+  top: 100%;
+}
+
+header{
+  width: 100%;
+  height: 100px;
+  background-color: #ff9696d8;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  box-shadow: 5px 10px 20px rgba(218, 166, 175, 0.829);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header ul{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+}
+header ul li{
+  list-style: none;
+}
+header ul li a{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+/*Key Frames*/
+
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+      filter: brightness(100%);
+    }
+    100% {
+      transform: scale(1.1);
+      filter: brightness(200%);
+    }
+  }
+  
+  @-webkit-keyframes pulse {
+    0% {
+      -webkit-transform: scale(1);
+      -webkit-filter: brightness(100%);
+    }
+    100% {
+      -webkit-transform: scale(1.1);
+      -webkit-filter: brightness(200%);
+    }
+  }
+
+
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 3s; /* Transição de opacidade de 0 a 1 em 3 segundos */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#background-overlay1 {
+    background-image: url("Surprise/fundo 1.gif");
+}
+
+#background-overlay2 {
+    background-image: url("Surprise/fundo\ 2.gif");
+}
+
+#background-overlay3 {
+  background-image: url("Surprise/fundo\ 3.gif");
+}
+#background-overlay4 {
+  background-image: url("Surprise/fundo4.gif");
+}
+#background-overlay5 {
+  background-image: url("Surprise/fundo5.gif");
+}
+#background-overlay6 {
+  background-image: url("Surprise/fundo6.gif");
+}
+#background-overlay7 {
+  background-image: url("Surprise/fundo\ 7.gif");
+}
+#background-overlay8 {
+  background-image: url("Surprise/fundo\ 8.gif");
+}
+#background-overlay9 {
+  background-image: url("Surprise/fundo\ 9.gif");
+}
+
+.panel{
+  width: 600px;
+  height: auto;
+  border-radius: 18px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+}
+.panel h1{
+  text-decoration: underline;
+  padding-left: 15px;
+}
+.panel p{
+  font-size: 25px;
+}
+#background-overlay1 .panel{
+  box-shadow: 0 0 20px rgba(255, 192, 203, 0.8);
+  color: #FF9696;
+}
+#background-overlay2 .panel{
+  margin-top: 200px;
+  box-shadow: 0 0 20px rgba(255, 192, 203, 0.8), 0 0 30px rgba(6, 6, 112, 0.61);
+  color: #03037a;
+}
+#background-overlay3 .panel{
+  box-shadow: 0 0 30px rgba(200, 160, 255, 0.8);
+  color: rgba(72, 61, 139, 1);
+}
+#background-overlay4 .panel{
+  box-shadow: 0 0 30px rgba(0, 0, 255, 0.575);
+  color: rgba(72, 61, 139, 1);
+}
+#background-overlay5 .panel{
+  box-shadow: 0 0 30px #ff4400e0;
+  color: #dd0606b9;
+}
+#background-overlay6 .panel{
+  box-shadow: -20px 0 20px #B0E0E6, 20px 0 20px #FF4500;
+  color: #0160ade3;
+}
+#background-overlay7 .panel{
+  box-shadow: 0 0 20px #00ff0071;
+  color: rgba(1, 73, 1, 0.664);
+}
+#background-overlay8{
+  align-items: center;
+    justify-content: flex-start;
+}
+#background-overlay8 .panel{
+  box-shadow: 0 0 20px #ffffffda;
+  color: #011f41d5;
+  margin-left: 50px;
+}
+#background-overlay9 .panel{
+  box-shadow: 0 0 20px #ffffffda;
+  color: #011f41d5;
+  margin-left: 50px;
+}
+#password-box {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(141, 0, 223, 0.8);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 1;
+    box-shadow: 0 0 15px rgba(5, 235, 252, 0.692);
+    color: rgba(5, 235, 252, 0.692);
+    font-size: 25px;
+}
+
+#password, #submit {
+    margin: 10px;
+    font-size: 25px;
+    background-color: rgba(5, 235, 252, 0.692);
+    color: black;
+}
+#submit{
+  padding: 3px 5px 3px 5px;
+  border-radius: 15px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 500;
+}
+#submit:hover{
+  box-shadow: 0 0 15px rgba(5, 235, 252, 0.692);
+ 
+}
+
+@media (min-width: 0px) and (max-width:699px){
+  body{
+    display:none;
+  }
+}
+@media (min-width: 700px) and (max-width:999px){
+  #password-box {
+    top: 20%;
+    left: 35%;
+    transform: translate(-30%, -30%);
+  }
+  .balao-de-dialogo{
+    font-size: 15px;
+  }
+  #per1{
+    bottom: 43%;
+    right: 3%;
+  }
+  #per1 .ponta{
+    right: 3%;
+
+  }
+  #per2{
+    bottom: 42%;
+    right: 9%;
+  }
+  #per2 .ponta{
+    right: 10%;
+  }
+  #per3{
+    top: 43%;
+    left: 8%;
+
+  }
+  #per3 .ponta{
+    left: 30%;
+  }
+  #per4{
+    bottom: 42%;
+    right: 2%;
+
+  }
+  #per4 .ponta{
+    left: 45%;
+  }
+  #per5{
+    bottom: 42%;
+    right: 14%;
+
+  }
+  #per5 .ponta{
+    right: -10%;
+  }
+  #per6{
+    top: 45%;
+    left: 12%;
+
+  }
+  #per6 .ponta{
+    left: 70%;
+  }
+  #per7{
+    bottom: 42%;
+    right: 12%;
+
+  }
+  #per7 .ponta{
+    left: 80%;
+  }
+  #per8{
+    top: 43%;
+    left: 12%;
+  }
+  #per8 .ponta{
+    left: 20%;
+  }
+  #per9{
+    top: 45%;
+    left: 17%;
+    
+  }
+  #per9 .ponta{
+    left: 40%;
+  }
+  #per10{
+    top: 53%;
+    right: 4%;
+    
+  }
+  #per10 .ponta{
+    left: 70%;
+  }
+  #per11{
+    top: 51%;
+    right: 13%;
+  
+  }
+  #per11 .ponta{
+    left: 90%;
+  }
+  #per12{
+    top: 52%;
+    right: 12%;
+
+  }
+  #per12 .ponta{
+    left: 85%;
+  }
+  #per13{
+    top: 53%;
+    right: 4%;
+
+  }
+  #per13 .ponta{
+    left: 50%;
+  }
+}
+
+@media (min-width: 1000px) and (max-width:1981px){
+  #password-box {
+    top: 20%;
+    left: 45%;
+    transform: translate(-30%, -30%);
+  }
+  #per1{
+    bottom: 43%;
+    right: 3%;
+
+  }
+  #per1 .ponta{
+    right: 3%;
+
+  }
+  #per2{
+    bottom: 42%;
+    right: 11%;
+ 
+  }
+  #per2 .ponta{
+    right: 10%;
+  }
+  #per3{
+    top: 43%;
+    left: 11%;
+
+  }
+  #per3 .ponta{
+    left: 30%;
+  }
+  #per4{
+    bottom: 42%;
+    right: 2%;
+
+  }
+  #per4 .ponta{
+    left: 45%;
+  }
+  #per5{
+    bottom: 42%;
+    right: 14%;
+
+  }
+  #per5 .ponta{
+    right: -10%;
+  }
+  #per6{
+    top: 45%;
+    left: 12%;
+
+  }
+  #per6 .ponta{
+    left: 70%;
+  }
+  #per7{
+    bottom: 42%;
+    right: 12%;
+    
+  }
+  #per7 .ponta{
+    left: 80%;
+  }
+  #per8{
+    top: 43%;
+    left: 12%;
+
+  }
+  #per8 .ponta{
+    left: 20%;
+  }
+  #per9{
+    top: 45%;
+    left: 17%;
+    
+  }
+  #per9 .ponta{
+    left: 40%;
+  }
+  #per10{
+    top: 53%;
+    right: 4%;
+    
+  }
+  #per10 .ponta{
+    left: 70%;
+  }
+  #per11{
+    top: 51%;
+    right: 13%;
+  
+  }
+  #per11 .ponta{
+    left: 90%;
+  }
+  #per12{
+    top: 52%;
+    right: 12%;
+
+  }
+  #per12 .ponta{
+    left: 85%;
+  }
+  #per13{
+    top: 53%;
+    right: 4%;
+
+  }
+  #per13 .ponta{
+    left: 50%;
+  }
+}
