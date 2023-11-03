@@ -78,6 +78,7 @@ document.addEventListener("DOMContentLoaded", function() {
             // Inicia a reprodução da música após a senha estar correta
             setTimeout(function() {
                 const audio = document.getElementById("background-audio");
+                audio.volume = 0.05; // altera o volume da musica sendo 1 maximo e 0 minimo
                 audio.play();
                 // Quando a música começa a tocar, mostre o cabeçalho
                 header.style.opacity = 1;

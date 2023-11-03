@@ -223,6 +223,7 @@ main{
     box-shadow: 0px 5px 20px -5px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
   }
@@ -297,6 +298,42 @@ main{
   .cartao h3{
     margin-top: 20px;
   }
+  .row .container{
+    gap: 40px;
+  }
+  .row{
+    width: 100%;
+  }
+  .row a{
+    text-decoration: none;
+    color: black;
+
+  }
+  .row a:hover{
+    transform: scale(1.1);
+  }
+  .row .container p{
+    font-size: 25px;
+  }
+  .img-Row-grande{
+    width: 100%;
+    max-width: 800px;
+    height: 300px;
+  }
+  #docente{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    list-style: none;
+  }
+  #docente li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   /*Footer*/
   footer{
     background-image: url('./img/Fundos-Texturas/quadronegro.jpg');
@@ -318,8 +355,8 @@ main{
     letter-spacing: 0.3rem;
   }
   footer .linha h4{
-    width: max-content;
     font-size: 18px;
+    text-align: justify;
   }
   footer p{
     margin-top: 0;
@@ -471,7 +508,7 @@ main{
         max-width: 80%;
       }
     }
-    @media (min-width: 802px) and (max-width: 999px){
+    @media (min-width: 802px) and (max-width: 1199px){
       #carouselExampleFade{
         max-width: 80%;
       }
@@ -490,13 +527,21 @@ main{
         max-width: 80%;
       }
       main .conteudo{
-        max-width: 80%;
+        max-width: 90%;
       }
       
       footer .cont{
         grid-template-columns: 1fr 1fr 1fr;
       }
     }
+    @media (max-width: 1400px){
+      .img-Row-grande{
+        width: 100%;
+        max-width: 600px;
+        max-height: 250px;
+      }
+    }
+    
     @media (min-width: 1820px) {
       #titulo-escola{
         min-width: 500px;
