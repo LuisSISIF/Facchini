@@ -5,10 +5,13 @@ document.addEventListener("DOMContentLoaded", function() {
     const divs = document.querySelectorAll(".background-overlay");
     const header = document.getElementById("header");
     const menuItems = document.querySelectorAll("#overlay-menu ul li a");
+    var videoElement = document.getElementById("videoElement");
+    const audio = document.getElementById("background-audio");
 
     let currentIndex = 0; // Índice da div atual
 
     function fadeInDiv(index) {
+        
         // Garante que o índice esteja dentro dos limites das divs
         if (index < 0) {
             index = 0;
@@ -48,9 +51,47 @@ document.addEventListener("DOMContentLoaded", function() {
         menuItem.addEventListener("click", function(event) {
             event.preventDefault(); // Impede a ação padrão do link
             const targetIndex = index; // Obtém o índice do item de menu clicado
+            if (targetIndex === 9){
+                atribTec(targetIndex);
+            }else{
+                desatribTec(targetIndex);
+            }
             fadeInDiv(targetIndex); // Chama a função para fazer a transição para a div correspondente
         });
     });
+
+    function keydownHandler(event) {
+        videoElement.volume = 0.5;
+        if (event.key === " ") {
+          event.preventDefault();
+          
+          if (audio.paused) {
+            setTimeout(function() {
+                audio.play();
+            }, 500);
+          } else {
+            audio.pause();
+          }
+          if (videoElement.paused) {
+            setTimeout(function() {
+                videoElement.play();
+            }, 1000);
+            
+          } else {
+            videoElement.pause();
+          }
+        }
+      }
+
+    function atribTec(index) {
+          // Adiciona o event listener à div específica com ID "minhaDiv"
+          document.body.addEventListener("keydown", keydownHandler);
+    }
+    function desatribTec(index) {
+          // Se index não for igual a 9, remova o event listener da div
+          videoElement.pause();
+          document.body.removeEventListener("keydown", keydownHandler); 
+    }
 
     submitButton.addEventListener("click", function() {
         const password = passwordInput.value;
@@ -77,8 +118,7 @@ document.addEventListener("DOMContentLoaded", function() {
             hideDivsByIds(divIdsToHide);
             // Inicia a reprodução da música após a senha estar correta
             setTimeout(function() {
-                const audio = document.getElementById("background-audio");
-                audio.volume = 0.05; // altera o volume da musica sendo 1 maximo e 0 minimo
+                audio.volume = 0.1; // altera o volume da musica sendo 1 maximo e 0 minimo
                 audio.play();
                 // Quando a música começa a tocar, mostre o cabeçalho
                 header.style.opacity = 1;
@@ -97,16 +137,17 @@ document.addEventListener("DOMContentLoaded", function() {
             window.location.href = "index.html";
         }
     });
+    
 });
 
 function hideDivsByIds(ids) {
-    ids.forEach((id) => {
-        const div = document.querySelector(id);
-        if (div) {
-            div.style.display = "none";
-        }
-    });
-}
+        ids.forEach((id) => {
+            const div = document.querySelector(id);
+            if (div) {
+                div.style.display = "none";
+            }
+        });
+    }
 
 document.addEventListener("DOMContentLoaded", function () {
     const balloonSequence = [

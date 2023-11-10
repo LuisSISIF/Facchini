@@ -308,6 +308,8 @@ main{
 }
 #profImage img{
     width: 250px;
+    height: 230px;
+    border-radius: 18px;
 }
 #profInform{
     padding: 10px 10px 10px 10px;
